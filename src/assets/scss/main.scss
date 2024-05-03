@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+@import url(../scss/reset.scss);
+
+
+$color_1: #010101;
+$color_2: #000031;
+$color_3: #fff;
+$color_4: rgb(193, 17, 25);
+$color_5: rgb(172, 0, 9);
+$color_grdnt: linear-gradient(#050100, rgb(193, 17, 25));
+$transition: all 0.4s ease-in-out;
+$gray:#525252;
+$shadow:9px 12px 13px rgba(0,0,0,0.16);
+
+// custom classes
+.robotoFont{font-family: 'Roboto', sans-serif;}
+.AppWrapper{width: 100%; padding: 0 15px;}
+.container {max-width: 96%;margin: 0 auto;padding: 0 15px}
+.overlay.active {background: rgba(0, 0, 0, .8);position: fixed;display: block;width: 100%;height: 100%;z-index: 9;left: 0;top: 0;opacity: 70%;-webkit-transition: .4s;transition: .4s}
+.dflex{display: flex;}
+.contentBetween{justify-content: space-between;}
+.contentCenter{justify-content: center;}
+.itemsCenter{align-items: center;}
+.btn{padding: 5px 15px; border-radius: 4px; background: $color_4; color: $color_3; transition: $transition; cursor: pointer; 
+    &:hover{opacity: 0.8; box-shadow: $shadow; }
+    &:focus{ outline: none; box-shadow: none;}
+}
+.customfixed{position: fixed; left: 0; right: 0; width: 100%; z-index: 1;}
+.conatainerFluid{width: 100%; padding: 0 15px;}
+.text-red{color: $color_4;}
+.dblock{display: block;}
+
+// .LoginHeader
+.LoginHeader{padding: 0 15px; margin-bottom: 120px;}
+.headerbtns{padding: 8px 16px;}
+.logo img{width: 180px;}
+
+
+// .CommonSlider
+.CommonSlider{
+    .sliderimg {
+        img{width: 100%; object-fit: cover;}
+    }
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    padding: 5px 20px; border-radius: 15px; background-color: $color_5;
+}
+
+.AppBanner{position: relative; height: 100vh; display: flex;justify-content: center;align-items: center; width: 100%; margin: 0 auto;
+    .homeBanne{height: 100vh; filter: brightness(0.2);
+        img{width: 100%;}
+    }
+}
+
+// .BannerContent
+.BannerContent{position: fixed; z-index: 1; left: 0; right: 0; max-width: 60%; margin: 0 auto; color: $color_3;
+    .Content_inner{text-align: center;}
+    .bannerInputBox{margin-top: 30px;
+        p{font-size: 20px;}
+    }
+    .inputbox{margin-top: 30px;}
+    .bannerHeading{font-size: 48px;}
+    .bannerSubHeading{margin-top: 15px;}
+    .inputbox{color: $color_3;        
+        input{background: #050100; opacity: 70%; padding: 21px 30px; width: 350px; border-radius: 8px 0 0 8px;
+            &::placeholder{color: $color_3;}
+        }
+        .btn{padding: 20px 18px; font-size: 18px; border-radius: 0 8px 8px 0;}
+    }
+}
+
+// .LoginMain
+.Login{position: fixed;left: 0;right: 0; z-index: 1; max-width: 400px;margin: 0 auto;padding: 35px; background: #000; opacity: 90%; border-radius: 8px;
+    .heading{font-size: 35px; text-transform: uppercase; font-weight: 500; margin-bottom: 20px;}
+    .login-inputbox{margin-bottom: 20px;}
+    input{width: 100%; padding: 15px; border-radius: 8px; border: 1px solid $color_3; width: 100%; color: $color_3;}
+    .btn{width: 100%; padding: 15px; font-size: 18px;}
+    .closebtn{position: absolute; right: 15px; top: 15px; font-size: 48px; color: $color_3;}
+}
+
+// .Page404
+.Page404{display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vh; margin: 0 auto; position: relative;
+    .innerdiv{padding: 200px;}
+    .btn{position: absolute; top: 73%; left: 50%; transform: translate(0,-50%); padding: 12px 25px; font-size: 18px;}
+}
+
+
+// listing css
+
+.appHeader{background: #00000085; padding: 8px 25px; z-index: 9;
+    .logo img{width: 160px;}
+    .navItem{gap: 0 40px;margin-left: 40px;
+        a{font-size: 15px;}
+    }
+    .navlink{color: $color_3;}
+    .IteimRightSide{margin: 0 0 0 auto;}
+    .userProfile{color: $color_3; gap: 0 15px;
+        .icons {font-size: 35px;
+            // svg{height: 32px;}
+        }
+    }
+    .profileIcon{font-size: 40px; color: $color_3;}
+    .drpUser{opacity: 0; height: 0; position: absolute; right: 15px; top: 62px; padding: 15px; border-radius: 10px; background-color: white;
+        &.active{ opacity: 1; transform: $transition; height: auto;}
+        span{display: block; color: $color_1;}
+    }
+}
+
+// .ListingPage
+.ListingPage{background-color: $color_1; color: $color_3;
+    .BannerContent{position: relative;}
+    .CommonSlider{height: 70vh;
+        img{filter: brightness(0.3); height: 70vh;}
+    }
+    .contentOverBanner{position: absolute; left: 25px; bottom: 20%; z-index: 1; max-width: 500px;color: #fff;
+        .MovieName{font-size: 46px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px;}
+        .flexbtn{gap: 0 15px;}
+        .btn{padding: 7px 24px; font-size: 18px; gap: 0 5px;}
+        i{font-size: 27px; position: relative; top: 2px;}
+        .desc{margin-bottom: 20px; line-height: 27px;}
+    }   
+}
+
+.moviesCards{padding: 15px 15px 50px 15px; max-width: 100%;
+    .movie_headding{font-size: 32px; margin-bottom: 20px;}
+}
+
+// .displayMoveis{display: grid; grid-template-columns: repeat( 12, minmax(250px, 1fr)); gap: 15px; width: 100%; max-width: 80%; margin: 0 auto;
+.displayMoveis{display: flex; flex-wrap: wrap; gap: 15px 8px;
+    .movieCard{width: 12%;}
+    .posterdiv img{width: 100%;}
+    .moviename{font-size: 20px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+    .flex_div_search_and_heading{display: flex; justify-content: space-between; width: 100%;}
+    .SearchMoivesForm{width: 30%;
+        input{width: 70%; padding: 10.5px 15px; outline: 0; border-radius: 0; border: 1px solid $color_2; color: $color_2;
+            &:focus{ box-shadow: 0 0 10px 12000px rgb(0 0 0 / 39%);}
+            &::placeholder{color: $color_2;}
+        }
+        .searchbtn{background: $color_2; padding: 10px 25px; text-align: center; color: #fff;}
+    }
+}
+.message_heading{font-size: 25px; text-align: center; padding: 50px;}
