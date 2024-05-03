@@ -1,4 +1,4 @@
-import Logo from '../assets/images/logo.jpg';
+import Logo from '../assets/images/logo.png';
 import Logo1 from '../assets/images/logo1.png';
 import LogoSvg from '../assets/images/logo.svg';
 import img_404 from '../assets/images/404.png';
@@ -6,6 +6,7 @@ import Poster from '../assets/images/movies-poster/poster.jpg';
 import Poster1 from '../assets/images/movies-poster/poster1.jpg';
 import Poster2 from '../assets/images/movies-poster/poster2.jpg';
 import Poster3 from '../assets/images/movies-poster/poster3.jpg';
+import cardPoster from '../assets/images/card-poster/black-adam.jpg';
 import cardPoster1 from '../assets/images/card-poster/avtar.jpg';
 import cardPoster2 from '../assets/images/card-poster/im-legentd.jpg';
 import cardPoster3 from '../assets/images/card-poster/300.jpg';
@@ -24,6 +25,7 @@ export {
     Poster1,
     Poster2,
     Poster3,
+    cardPoster,
     cardPoster1,
     cardPoster2,
     cardPoster3,

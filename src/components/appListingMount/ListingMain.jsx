@@ -1,7 +1,7 @@
 import { SliderImages } from "../SliderImages";
 import AppHeader from "../appHeader";
 import Slider from "../commonSlider";
-import DisplayMive from './displayMovie'
+import DisplayMovie from './displayMovie'
 
 
 const ListingMain = () => {
@@ -12,7 +12,7 @@ const ListingMain = () => {
                 <Slider slides={SliderImages} />
             </div>
             <div className="moviesCards">
-                <DisplayMive />
+                <DisplayMovie />
             </div>
         </section>
     )

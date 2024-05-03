@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { LogoSvg } from "./staticImages";
+import { Logo } from "./staticImages";
 import { CgProfile } from "react-icons/cg";
 import { FaSearch } from "react-icons/fa";
 import { IoMdNotificationsOutline } from "react-icons/io";
@@ -9,10 +9,10 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 const AppHeader = () => {
     const [isDrpUer, setIsDrpUser] = useState('')
     return (
-        <div className="appHeader conatainerFluid conatainerFluid customfixed">
+        <div className="appHeader conatainerFluid conatainerFluid">
             <div className="flexheader dflex itemsCenter">
                 <Link to={'/'} className="logo">
-                    <img src={LogoSvg} alt={LogoSvg} />
+                    <img src={Logo} alt={Logo} />
                 </Link>
 
                 <ul className="navItem dflex">
@@ -21,12 +21,9 @@ const AppHeader = () => {
                     <li><Link to={'/'} className="navlink">Movies</Link></li>
                     <li><Link to={'/'} className="navlink">News & Popular</Link></li>
                     <li><Link to={'/'} className="navlink">My List</Link></li>
-                    <li><Link to={'/'} className="navlink">Browse By Language</Link></li>
                 </ul>
 
-                <div className="IteimRightSide">
-
-                </div>
+                {/* <div className="IteimRightSide"></div> */}
                 <div className="userProfile dflex itemsCenter">
                     {/* <span className="icons"><FaSearch /></span> */}
                     {/* <span className="icons"><IoMdNotificationsOutline /></span> */}

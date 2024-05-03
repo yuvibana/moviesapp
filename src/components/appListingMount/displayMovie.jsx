@@ -4,8 +4,7 @@ import MoviesCard from "./MoviesCard";
 const HndlDisplayMovies = ({ }) => {
     return (
         <div className="displayMoveis">            
-                <MoviesCard />
-           
+                <MoviesCard />           
         </div>
     )
 }

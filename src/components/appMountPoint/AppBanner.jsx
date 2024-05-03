@@ -1,4 +1,4 @@
-import Header from "./Header";
+import Header from "../Header";
 import { GrNext } from "react-icons/gr";
 import AppSlider from "../commonSlider";
 // import { SliderImages } from "../SliderImages";

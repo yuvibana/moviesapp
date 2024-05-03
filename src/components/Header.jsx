@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { LogoSvg } from "../staticImages";
+import { Logo } from "./staticImages";
 import { useState } from "react";
-import Login from "../Login";
+import Login from "./Login";
 const Header = () => {
 
     const [loggedIn, setloggedIn] = useState(false);
@@ -12,7 +12,7 @@ const Header = () => {
             <header className="LoginHeader">
                 <div className="headerflex dflex contentBetween itemsCenter">
                     <Link to={'/'} className="logo">
-                        <img src={LogoSvg} alt={LogoSvg} />
+                        <img src={Logo} alt={Logo} />
                     </Link>
                     <button className="headerbtns btn" onClick={OpnLoginBox}>Login/Signin</button>
                 </div>

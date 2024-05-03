@@ -88,23 +88,26 @@ $shadow:9px 12px 13px rgba(0,0,0,0.16);
 
 // listing css
 
-.appHeader{background: #00000085; padding: 8px 25px; z-index: 9;
-    .logo img{width: 160px;}
+.appHeader{background: #fff; padding: 8px 25px; z-index: 9;
+    // .logo img{width: 160px;}
     .navItem{gap: 0 40px;margin-left: 40px;
         a{font-size: 15px;}
     }
-    .navlink{color: $color_3;}
+    .navlink{color: $color_4; font-weight: bold;}
     .IteimRightSide{margin: 0 0 0 auto;}
-    .userProfile{color: $color_3; gap: 0 15px;
-        .icons {font-size: 35px;
-            // svg{height: 32px;}
-        }
+    .userProfile{color: $color_3; gap: 0 15px; margin: auto 0 auto auto;
+        .icons {font-size: 35px;}
     }
-    .profileIcon{font-size: 40px; color: $color_3;}
+    .profileIcon{font-size: 40px; color: $color_4;}
     .drpUser{opacity: 0; height: 0; position: absolute; right: 15px; top: 62px; padding: 15px; border-radius: 10px; background-color: white;
         &.active{ opacity: 1; transform: $transition; height: auto;}
         span{display: block; color: $color_1;}
     }
+}
+
+.tooltip{position: relative;
+    .tootltip_text{position: absolute; background: $color_4; left: 50%; top: 50%; transform: translate(-50%, -100%); padding: 0 8px; border-radius: 4px; visibility: hidden; opacity: 0; transition: all 0.5s ease;}
+    &:hover .tootltip_text{visibility: visible; opacity: 1;}
 }
 
 // .ListingPage
@@ -122,22 +125,37 @@ $shadow:9px 12px 13px rgba(0,0,0,0.16);
     }   
 }
 
-.moviesCards{padding: 15px 15px 50px 15px; max-width: 100%;
+.moviesCards{padding: 15px 15px 50px 15px; max-width: 100%; min-height: 500px;
     .movie_headding{font-size: 32px; margin-bottom: 20px;}
 }
 
 // .displayMoveis{display: grid; grid-template-columns: repeat( 12, minmax(250px, 1fr)); gap: 15px; width: 100%; max-width: 80%; margin: 0 auto;
-.displayMoveis{display: flex; flex-wrap: wrap; gap: 15px 8px;
-    .movieCard{width: 12%;}
-    .posterdiv img{width: 100%;}
+.displayMoveis{display: flex; flex-wrap: wrap; gap: 15px 8px; justify-content: center; max-width: 95%; margin: 0 auto;
+    .movieCard{width: 16%;}
+    .posterdiv img{width: 100%; min-height: 260px;}
     .moviename{font-size: 20px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
     .flex_div_search_and_heading{display: flex; justify-content: space-between; width: 100%;}
-    .SearchMoivesForm{width: 30%;
-        input{width: 70%; padding: 10.5px 15px; outline: 0; border-radius: 0; border: 1px solid $color_2; color: $color_2;
-            &:focus{ box-shadow: 0 0 10px 12000px rgb(0 0 0 / 39%);}
+    .searchMovies_div{width: 80%; display: flex; justify-content: end; gap: 0 45px; align-items: center;}
+    .SearchMoivesForm{width: 34%; display: flex;
+        input{width: 100%; padding: 16px 15px; outline: 0; border-radius: 50px 0 0 50px; border: 1px solid $color_2; color: $color_2;
+            // &:focus{ box-shadow: 0 0 10px 12000px rgb(0 0 0 / 39%);}
             &::placeholder{color: $color_2;}
         }
-        .searchbtn{background: $color_2; padding: 10px 25px; text-align: center; color: #fff;}
+        .searchbtn{background: $color_4; padding: 10px 25px; text-align: center; color: #fff; border-radius: 0 50px 50px 0;}
+    }
+    .filter_btns_div{display: flex; gap: 0 45px;
+        button{background: $color_4; color: $color_3; padding: 10px 25px; border-radius: 50px; transform: scale(1.1); transition: all 0.5s ease;
+            &:hover{transform: scale(1.2);}
+        }
+    }
+    .dataDiv{padding: 5px 8px;}
+    .rightdiv{gap: 0 15px;
+        .heart{color: $color_4;
+            &:hover{color: $color_3;}
+        }
+        .star{color: rgb(212, 155, 8);
+            &:hover{color: $color_3;}
+        }
     }
 }
 .message_heading{font-size: 25px; text-align: center; padding: 50px;}
