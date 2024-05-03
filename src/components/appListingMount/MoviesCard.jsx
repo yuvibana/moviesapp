@@ -24,8 +24,6 @@ export default function MoviesCard() {
         }
     };
 
-   
-
     useEffect(() => {
         getMoviesData('hollywood');
     }, [])
@@ -36,7 +34,7 @@ export default function MoviesCard() {
             getMoviesData('hollywood', page - 1);
         }
     }
-    
+
     const handleNext = () => {
         setPage(page + 1);
         getMoviesData('hollywood', page + 1);
