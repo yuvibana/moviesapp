@@ -1,27 +1,31 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 
-function SearchMoives({ getMoviesData }) {
+function SearchMoives({
+    getMoviesData,
+    pages,
+    movieCategory,
+    setMovieCategory
+}) {
     const [searchQuery, setSearchQuery] = useState('all')
     const inputRef = useRef()
     const handleChange = (e) => {
-        setSearchQuery(e.target.value)
-        getMoviesData(searchQuery)
+        setSearchQuery(e.target.value);
+        getMoviesData(searchQuery, pages);
     }
     const handleSearch = (e) => {
         e.preventDefault();
-        getMoviesData(searchQuery)
+        getMoviesData(searchQuery, pages);
         inputRef.current?.blur();
     }
-
 
     return (
 
         <div className='searchMovies_div'>
             <div className='filter_btns_div'>
-                <button onClick={() => { getMoviesData('Hollywood') }}>Hollywood</button>
-                <button onClick={() => { getMoviesData('Bollywood') }}>Bollywood</button>
-                <button onClick={() => { getMoviesData('Latest') }}>Latest Realesd</button>
+                <button onClick={() => { getMoviesData(setMovieCategory('hollywood'), pages) }}>Hollywood</button>
+                <button onClick={() => { getMoviesData(setMovieCategory('bollywood'), pages) }}>Bollywood</button>
+                <button onClick={() => { getMoviesData(setMovieCategory('latest'), pages) }}>Latest Realesd</button>
             </div>
             <form
                 onSubmit={handleSearch}
