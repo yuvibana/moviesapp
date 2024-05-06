@@ -3,6 +3,7 @@ import ErrPage from "./components/Error";
 import ListingMain from "./components/appListingMount/ListingMain";
 import HomePage from "./components/appMountPoint/HomePage";
 import { Routes, Route, useNavigate } from "react-router-dom";
+import MovieDetailsPage from './components/MovieDetails/MovieDetailsPage'
 
 function App() {
 
@@ -20,8 +21,9 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/*" element={<ErrPage />} />
         <Route exact path="/movieslist" element={<ListingMain />} />
+        <Route path="/movieslist/:movieid" element={<MovieDetailsPage />} />
+        <Route path="/*" element={<ErrPage />} />
       </Routes>
     </>
   );

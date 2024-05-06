@@ -10,7 +10,7 @@ const AppHeader = () => {
     const [isDrpUer, setIsDrpUser] = useState('')
     return (
         <div className="appHeader conatainerFluid conatainerFluid">
-            <div className="flexheader dflex itemsCenter">
+            <div className="flexheader dflex itemsCenter contentBetween">
                 <Link to={'/'} className="logo">
                     <img src={Logo} alt={Logo} />
                 </Link>
@@ -19,11 +19,9 @@ const AppHeader = () => {
                     <li><Link to={'/'} className="navlink">Home</Link></li>
                     <li><Link to={'/'} className="navlink">Tv Shows</Link></li>
                     <li><Link to={'/'} className="navlink">Movies</Link></li>
-                    <li><Link to={'/'} className="navlink">News & Popular</Link></li>
-                    <li><Link to={'/'} className="navlink">My List</Link></li>
+                    {/* <li><Link to={'/'} className="navlink">News & Popular</Link></li>
+                    <li><Link to={'/'} className="navlink">My List</Link></li> */}
                 </ul>
-
-                {/* <div className="IteimRightSide"></div> */}
                 <div className="userProfile dflex itemsCenter">
                     {/* <span className="icons"><FaSearch /></span> */}
                     {/* <span className="icons"><IoMdNotificationsOutline /></span> */}

@@ -97,12 +97,11 @@ $shadow:9px 12px 13px rgba(0,0,0,0.16);
 
 .appHeader{background: #fff; padding: 8px 25px; z-index: 9;
     // .logo img{width: 160px;}
-    .navItem{gap: 0 40px;margin-left: 40px;
+    .navItem{gap: 0 40px;
         a{font-size: 15px;}
     }
     .navlink{color: $color_4; font-weight: bold;}
-    .IteimRightSide{margin: 0 0 0 auto;}
-    .userProfile{color: $color_3; gap: 0 15px; margin: auto 0 auto auto;
+    .userProfile{color: $color_3; gap: 0 15px;
         .icons {font-size: 35px;}
     }
     .profileIcon{font-size: 40px; color: $color_4;}
@@ -156,19 +155,34 @@ $shadow:9px 12px 13px rgba(0,0,0,0.16);
         }
     }
     .dataDiv{padding: 5px 8px;}
-    .rightdiv{gap: 0 15px;
-        .heart{color: $color_4;
-            &:hover{color: $color_3;}
-        }
-        .star{color: rgb(212, 155, 8);
-            &:hover{color: $color_3;}
-        }
-    }
+    .rightdiv{gap: 0 15px;}
 }
+
+.heart{color: $color_4; cursor: pointer;
+    &:hover{color: $color_3;}
+}
+.star{color: rgb(212, 155, 8); cursor: pointer;
+    &:hover{color: $color_3;}
+}
+
 .message_heading{font-size: 25px; text-align: center; padding: 50px;}
 
 .pagination{width: 100%; display: flex; justify-content: center; gap: 0 15px; padding-top: 25px;
     .btn{
         &.active{cursor: no-drop;}
     }
+}
+
+.displayMoveDetail{background: $color_1; color: $color_3; height: 100vh; display: flex; align-self: center;
+    .flex_div{max-width: 1380px; padding: 0 15px; margin: 0 auto; }
+    figure{width: 49%;
+        img{width: 100%; height: 100vh; object-fit: cover;}
+    }
+    .movie_detail_div{width: 49%;}
+    .movie_name{font-size: 40px; margin-bottom: 25px;}
+    .overview{font-size: 16px; font-style: italic; text-align: justify; line-height: 28px; margin-bottom: 25px;}
+    .small_flex{gap: 0 35px; font-size: 20px; margin-bottom: 25px;}
+    .year{font-size: 25px; font-style: italic;}
+    .star{margin-left: 15px;}
+    .btn{padding: 15px 35px; font-size: 18px; cursor: no-drop;}
 }
